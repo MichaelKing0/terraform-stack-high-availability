@@ -6,6 +6,7 @@ resource "aws_subnet" "eu-west-1a-public" {
   vpc_id     = "${var.vpc_id}"
   cidr_block = "10.0.1.0/24"
   availability_zone = "eu-west-1a"
+  map_public_ip_on_launch = true
   tags = {
     Name = "1a public"
   }
@@ -24,6 +25,7 @@ resource "aws_subnet" "eu-west-1b-public" {
   vpc_id     = "${var.vpc_id}"
   cidr_block = "10.0.3.0/24"
   availability_zone = "eu-west-1b"
+  map_public_ip_on_launch = true
   tags = {
     Name = "1b public"
   }
